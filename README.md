@@ -2,6 +2,8 @@
 
 **A local, GPU-accelerated artist tagger that learns your library.**
 
+![Vtagger tagging a file, with ranked artist suggestions and the rename preview](docs/screenshot.png)
+
 Vtagger renames your images and videos to `[artist] - original name`. It learns every artist's style from the files you've already tagged, suggests the artist for each new file, and can find every file by one artist in your untagged pile in seconds. It runs entirely on your own machine, and every tag and every rejection makes it better.
 
 ---
