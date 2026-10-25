@@ -1,0 +1,11 @@
+# PyTorch: get the CUDA build from https://pytorch.org (vtagger.py installs it automatically)
+torch
+torchvision
+customtkinter
+Pillow
+numpy
+opencv-python
+timm
+safetensors
+huggingface_hub
+transformers
