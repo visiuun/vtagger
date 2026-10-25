@@ -134,4 +134,8 @@ Everything stays on your computer. Vtagger keeps its database (file fingerprints
 
 ## License
 
-[MIT](LICENSE) © visiuun
+[PolyForm Noncommercial 1.0.0](LICENSE) © visiuun
+
+- **Free for any noncommercial use:** personal use, study, research, hobby projects, nonprofits. You can use, modify, fork and share it.
+- **Credit is required:** anyone who shares Vtagger or anything built from it must include the license and this notice: `Required Notice: Copyright (c) 2026 visiuun (https://github.com/visiuun/vtagger)`.
+- **No commercial use.** Selling it, or using it in a paid product or service, is not allowed without written permission.
