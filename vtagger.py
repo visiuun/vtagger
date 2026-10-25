@@ -102,7 +102,7 @@ def bootstrap_environment() -> None:
         sys.exit(subprocess.call([sys.executable] + sys.argv, env=env))
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and not getattr(sys, "frozen", False):
     bootstrap_environment()
 
 os.environ.setdefault("CUDA_DEVICE_ORDER", "PCI_BUS_ID")
@@ -4805,9 +4805,13 @@ def main():
     if not torch.cuda.is_available():
         r = tk.Tk()
         r.withdraw()
+        if getattr(sys, "frozen", False):
+            fix = "Fix: install or update your NVIDIA driver."
+        else:
+            fix = (f'Fix: run\n"{sys.executable}" -m pip install --upgrade torch torchvision '
+                   f"--index-url {_TORCH_INDEX}")
         go = messagebox.askyesno("No CUDA GPU", "PyTorch cannot see your NVIDIA GPU, so Vtagger would run on the CPU "
-                                 "(very slow).\n\nFix: run\n" f'"{sys.executable}" -m pip install --upgrade torch torchvision '
-                                 f"--index-url {_TORCH_INDEX}\n\nContinue on CPU anyway?")
+                                 f"(very slow).\n\n{fix}\n\nContinue on CPU anyway?")
         r.destroy()
         if not go:
             return
