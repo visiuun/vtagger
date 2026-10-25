@@ -38,6 +38,16 @@ Vtagger renames your images and videos to `[artist] - original name`. It learns 
 
 ## Install
 
+### Option A: Windows app (no Python needed)
+
+1. Download `Vtagger-v50-windows-x64.7z` from the [latest release](https://github.com/visiuun/vtagger/releases/latest).
+2. Extract it with [7-Zip](https://www.7-zip.org/) (about 3.7 GB unpacked).
+3. Run `Vtagger.exe` inside the `Vtagger` folder.
+
+PyTorch with CUDA is included. On first launch the vision model (about 4.5 GB) downloads automatically. You need an NVIDIA GPU with a recent driver for full speed.
+
+### Option B: Run from source
+
 ```bash
 git clone https://github.com/visiuun/vtagger.git
 cd vtagger
